@@ -1,4 +1,5 @@
 'use strict';
+
 require('dotenv').config();
 const builder = require('botbuilder');
 const helpDialog = require('./dialogs/help').dialogInfo;

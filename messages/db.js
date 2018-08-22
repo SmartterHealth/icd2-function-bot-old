@@ -1,4 +1,6 @@
 
+'use strict';
+
 const sql = require('mssql')
 
 function parseKeywords(keyword) {
@@ -41,7 +43,8 @@ exports.searchCodes = function(keywords) {
                             results.push({
                                 "code": record["ICD10"].trim(),
                                 "description": record["Short_Description"].trim(),
-                                "hipaa": record["HIPAA_valid"]
+                                "hipaa": new Boolean(record["HIPAA_valid"]),
+                                "chapter": record["ChapterCodeKey"].trim()
                             });
                         });
                         resolve(results);

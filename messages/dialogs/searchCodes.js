@@ -11,6 +11,8 @@ exports.dialogInfo = {
             var matches = msg.match(/^(codes|search codes)\s?(.*)$/i);
             var keywords = matches[matches.length - 1];
 
+            session.send(`Searching codes for *${keywords}*. Please wait...`);
+
             searchCodes(keywords)
                 .then((codes) => {
                     let count = codes.length;
@@ -18,7 +20,7 @@ exports.dialogInfo = {
                     console.log(`${count} codes retreived from service.`);
 
                     if (count < 1) {
-                        var msg = `Sorry! I found 0 results for *${keywords}. Please try another search.`
+                        var msg = `Sorry! I found 0 results for *${keywords}*. Please try another search.`
                         session.endDialog(msg);
                     } else {
                         var list = [];
