@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "func start host"
+    "start": "func start host",
+    "tsc": "./node_modules/.bin/tsc"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +13,9 @@
     "botbuilder": "^3.15.0",
     "dotenv": "^6.0.0",
     "mssql": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.0",
+    "typescript": "^3.0.1"
   }
 }
