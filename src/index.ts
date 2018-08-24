@@ -3,8 +3,8 @@
 require('dotenv').config();
 import {IDialogInfo} from './dialogs/IDialogInfo';
 import * as builder from 'botbuilder';
-const helpDialog: IDialogInfo = require('./dialogs/helpDialogInfo');
-const searchCodesDialog = require('./dialogs/searchCodesDialogInfo');
+import {helpDialog} from './dialogs/helpDialogInfo';
+import {searchCodesDialog} from './dialogs/searchCodesDialogInfo';
 
 var connector:builder.ChatConnector = new builder.ChatConnector({
     appId: process.env.CHAT_CONNECTOR_APP_ID,
@@ -13,8 +13,9 @@ var connector:builder.ChatConnector = new builder.ChatConnector({
 
 var bot:builder.UniversalBot = new builder.UniversalBot(connector);
 
+// Load dialogs
 bot.dialog(helpDialog.id, helpDialog.action).triggerAction({ matches: helpDialog.pattern });
-bot.dialog(searchCodesDialog.id, searchCodesDialog.dialog).triggerAction({ matches: searchCodesDialog.pattern });
+bot.dialog(searchCodesDialog.id, searchCodesDialog.action).triggerAction({ matches: searchCodesDialog.pattern });
 
 var listener = connector.listen();
 

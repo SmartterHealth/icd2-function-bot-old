@@ -1,1 +1,2 @@
-declare const searchCodes: any;
+import { IDialogInfo } from './IDialogInfo';
+export declare const searchCodesDialog: IDialogInfo;

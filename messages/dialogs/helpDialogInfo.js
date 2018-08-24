@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpDialog = {
+exports.helpDialog = {
     id: "help",
     name: "Help",
     pattern: /help/i,
@@ -25,5 +25,4 @@ const helpDialog = {
         session.endDialog(msg);
     }
 };
-exports.default = helpDialog;
 //# sourceMappingURL=helpDialogInfo.js.map

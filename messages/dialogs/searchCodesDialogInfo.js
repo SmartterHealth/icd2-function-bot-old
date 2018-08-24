@@ -1,9 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const searchCodes = require('../db').searchCodes;
-exports.dialogInfo = {
-    id: 'searchCodes',
-    name: 'searchCodes',
+exports.searchCodesDialog = {
+    id: "searchCodes",
+    name: "Search Codes",
     pattern: /.*(codes|search codes).*/i,
-    dialog: [(session, args, next) => {
+    action: [(session, args, next) => {
             var msg = session.message.text;
             var matches = msg.match(/^(codes|search codes)\s?(.*)$/i);
             var keywords = matches[matches.length - 1];
@@ -30,5 +32,4 @@ exports.dialogInfo = {
             });
         }]
 };
-;
 //# sourceMappingURL=searchCodesDialogInfo.js.map

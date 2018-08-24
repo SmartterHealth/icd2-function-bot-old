@@ -1,3 +1,2 @@
 import { IDialogInfo } from './IDialogInfo';
-declare const helpDialog: IDialogInfo;
-export default helpDialog;
+export declare const helpDialog: IDialogInfo;

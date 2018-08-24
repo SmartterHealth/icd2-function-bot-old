@@ -1,7 +1,7 @@
 import * as botbuilder from 'botbuilder';
 import {IDialogInfo} from './IDialogInfo'
 
-const helpDialog: IDialogInfo  = {
+export const helpDialog: IDialogInfo  = {
     id: "help",
     name: "Help",
     pattern: /help/i,
@@ -28,5 +28,3 @@ const helpDialog: IDialogInfo  = {
         session.endDialog(msg);
     }
 }
-
-export default helpDialog;
