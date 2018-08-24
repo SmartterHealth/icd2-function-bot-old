@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "func start host",
-    "tsc": "./node_modules/.bin/tsc"
+    "tsc": "./node_modules/.bin/tsc",
+    "clean": "rm -rf ./messages",
+    "copy": "cp ./src/*.json ./messages",
+    "build": "npm run clean; npm run tsc; npm run copy"
   },
   "author": "",
   "license": "ISC",
