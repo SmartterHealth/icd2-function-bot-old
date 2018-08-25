@@ -27,10 +27,10 @@ exports.searchCodes = function (keywords) {
                 .then((data) => {
                 data.recordset.forEach((record) => {
                     results.push({
-                        "code": record["ICD10"].trim(),
-                        "description": record["Short_Description"].trim(),
-                        "hipaa": new Boolean(record["HIPAA_valid"]),
-                        "chapter": record["ChapterCodeKey"].trim()
+                        "code": record["code"].trim(),
+                        "description": record["description"].trim(),
+                        "hipaa": new Boolean(record["hipaa"]),
+                        "chapter": record["chapter"].trim()
                     });
                 });
                 resolve(results);
