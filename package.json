@@ -8,7 +8,7 @@
     "tsc": "./node_modules/.bin/tsc",
     "clean": "rm -rf ./messages",
     "copy": "cp ./src/*.json ./messages",
-    "build": "npm run clean; npm run tsc; npm run copy",
+    "build": "npm run tsc; npm run copy",
     "start": "npm run build; func start host"
   },
   "author": "",

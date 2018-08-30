@@ -1,6 +1,5 @@
 {
   "disabled": false,
-  "scriptFile": "index.js",
   "bindings": [
     {
       "authLevel": "function",
@@ -15,7 +14,7 @@
     {
       "type": "http",
       "direction": "out",
-      "name": "res",
+      "name": "res"
     }
   ]
 }
