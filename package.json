@@ -4,7 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "func start host",
     "tsc": "./node_modules/.bin/tsc",
     "clean": "rm -rf ./messages",
     "copy": "cp ./src/*.json ./messages",
