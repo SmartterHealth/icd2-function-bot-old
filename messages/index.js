@@ -5,8 +5,8 @@ const builder = require("botbuilder");
 const helpDialogInfo_1 = require("./dialogs/helpDialogInfo");
 const searchCodesDialogInfo_1 = require("./dialogs/searchCodesDialogInfo");
 var connector = new builder.ChatConnector({
-    appId: process.env.CHAT_CONNECTOR_APP_ID,
-    appPassword: process.env.CHAT_CONNECTOR_APP_PASSWORD
+    appId: process.env.MicrosoftAppId,
+    appPassword: process.env.MicrosoftAppPassword
 });
 var bot = new builder.UniversalBot(connector);
 // Load dialogs

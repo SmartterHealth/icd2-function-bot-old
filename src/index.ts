@@ -7,8 +7,8 @@ import {helpDialog} from './dialogs/helpDialogInfo';
 import {searchCodesDialog} from './dialogs/searchCodesDialogInfo';
 
 var connector:builder.ChatConnector = new builder.ChatConnector({
-    appId: process.env.CHAT_CONNECTOR_APP_ID,
-    appPassword: process.env.CHAT_CONNECTOR_APP_PASSWORD
+    appId: process.env.MicrosoftAppId,
+    appPassword: process.env.MicrosoftAppPassword
 });
 
 var bot:builder.UniversalBot = new builder.UniversalBot(connector);
